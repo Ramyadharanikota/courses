@@ -1,0 +1,78 @@
+
+.addcourse{
+    width: 7%;
+    height: 5%;
+    margin-left: 15%;
+}
+.box2{
+    height: 600px;
+    width:1000px;
+    background-color:rgb(29,106,128);;
+    border:5px;
+    margin-left: 15%;
+
+}
+th{
+    padding: 10px;
+
+}
+.input{
+    width: 300px;
+    height: 30px;
+    margin-left: 5%;
+    font-size: large;
+    color: black;
+    border-radius: 5px;
+}
+.tbody{
+    font-size: x-large;
+    color: rgb(7,101,141);
+    background-color: #eef2f4;
+}
+.btn{
+    margin-left: 30%;
+    margin-bottom: 1%;
+    width: 300px;
+    height:50px;
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(3, 90,82);
+}
+.border{
+    margin-right:60%;
+    
+    
+}
+.font{
+    font-size: xx-large;
+    background-color: rgb(29 106 128);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.click{
+    width:100px;
+    height: 35px;
+    margin-left: 65%;
+    border: 0px;
+    font-size: larger;
+
+}
+.table{
+    margin-left: 15%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 800px;
+    height: 500px;
+    color: white;
+}
+
+.h1{
+    text-align:center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 3%;
+    font-weight: bold;
+    color: white;
+}
+
+

@@ -1,0 +1,109 @@
+<body>
+    <label for="SEARCH:" class="form-label">SEARCH :</label>
+    <input type="text" value="submit" style="width:170px; height:40px; font-size:large;" placeholder="enter course details" [(ngModel)]="searchtext" name="array id" class="form-control">
+
+<button type="getCourse" class="btn2 btn-primary" (click)="Courses()"(click)="toggleCourse()"  class="getbtn">GET COURSE DETAILS</button>
+<table class="table-bg" *ngIf="Course" matSort>
+<br>
+<table class="border" border="2"> 
+    
+         
+    <thead class="font">
+        
+    <tr>
+        <th>CourseName</th>
+        <th>CourseId</th>
+        <th>InstituteName</th>
+        <th>Address</th>
+        <th>CourseDuration</th>
+        <th>CourseURL</th>
+        <th>update</th>
+        
+    </tr>
+</thead>
+
+<br>
+<!--here we can see GET details here for using ng for loop ing-->
+
+<tbody class="tbody"class="text-center">
+<tr *ngFor="let text of courses | filter : searchtext"> <!--here we are looping concept for given data so all the data can be stored here-->
+    <td>
+        <div *ngIf="!hidden">
+            {{text.CourseName}}
+        </div>
+        <div *ngIf="hidden">
+            <input class="text" type="text" [(ngModel)]="text.CourseName">
+        </div>
+
+    </td>
+    <td>
+        <div *ngIf="!hidden">
+            {{text.CourseId}}
+        </div>
+        <div *ngIf="hidden">
+            <input class="text" type="text" [(ngModel)]="text.CourseId">
+        </div>
+
+    </td>
+    <td>
+        <div *ngIf="!hidden">
+            {{text.InstituteName}}
+        </div>
+        <div *ngIf="hidden">
+            <input class="text" type="text" [(ngModel)]="text.InstituteName">
+        </div>
+
+    </td>
+    <td>
+        <div *ngIf="!hidden">
+            {{text.Address}}
+        </div>
+        <div *ngIf="hidden">
+            <input class="text" type="text" [(ngModel)]="text.
+            Address">
+        </div>
+
+    </td>
+    <td>
+        <div *ngIf="!hidden">
+            {{text.CourseDuration}}
+        </div>
+        <div *ngIf="hidden">
+            <input class="text" type="text" [(ngModel)]="text.CourseDuration">
+        </div>
+
+    </td>
+    <td>
+        <div *ngIf="!hidden">
+            {{text.CourseURL}}
+        </div>
+        <div *ngIf="hidden">
+            <input class="text" type="text" [(ngModel)]="text.CourseURL">
+        </div>
+
+    </td>
+    
+
+ 
+ <!--this buttons used for edit and delete functions  in edit we can add (if else) in ts.file conditions here-->
+ 
+ 
+<td>
+    <div *ngIf="!hidden">
+        <button class="btn1" (click)="editDoc()">edit</button>
+        <button class="btn3" (click)="deleteCourse(text.id)">delete</button>
+    </div>
+</td>
+<td>
+    <div *ngIf="hidden">
+        <button class="btn1" (click)="updateCourseData(text)">update</button>
+        <button class="btn3" (click)="cancel()" >cancel</button>
+    </div>
+</td>
+</tr>
+</tbody>
+     
+
+</table>
+</table>
+</body>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="addcoursedetails" class="btn btn-primary" (click)="toggleCourse()"  >addcourse</button>
+<table *ngIf="Course" class="table-bg" matsort>
+    <a href="/addcourse"><button class="btn btn-primary" type="submit" style="margin-left: 56%;">getdetails</button></a>
+    <!-- here we used div class in table format-->
+        <div class="box2">
+    <h1 class="h1" >UNIVERSITY COURSE DETAILS</h1>
+    <br>
+<!--these data is form content which details we can give the form-->
+
+<table  class="table"  >
+    <div *ngFor="let item of courses"></div>
+    <tr>
+    <td><label>CourseId :</label></td>
+    <td><input class="input" placeholder="enter course number" [(ngModel)]="CourseId "></td>
+    </tr>
+
+    <tr>
+    <td><label> CourseName :</label> </td>
+    <td><input class="input" type="text" placeholder="enter the name" [(ngModel)]="CourseName"></td>
+    </tr>
+
+    <tr>
+    <td><label>InstituteName: </label></td>
+    <td><input class="input" placeholder="enter college name"[(ngModel)]="InstituteName"> </td>
+    </tr>
+
+    <tr>
+    <td><label>Address :</label></td>
+    <td><input class="input"  type="text" placeholder="enter the address" [(ngModel)]="Address"></td>
+    </tr>
+
+
+    <tr>
+    <td><label>CourseDuration :</label></td>
+    <td><input class="input" type="text" placeholder="enter the duration " [(ngModel)]="CourseDuration"></td>
+    
+    </tr>
+    <tr>
+        <td><label>CourseURL :</label></td>
+        <td><input class="input" type="text" placeholder="enter the URL" [(ngModel)]="CourseURL"></td>
+        </tr>
+    
+    <br>
+    <br>
+    <br>
+    <button class="click"  (click)="onSubmit()"> submit</button>
+</table>
+
+</div>
+ <!--these data used for data heading border
+<label for="quantity"></label>
+<br>
+<br>
+<button (click)="getCourse()" class="btn">GET COURSE DETAILS</button>
+<br>
+<table class="border" border="2"> 
+    <thead class="font">
+    <tr>
+        <th>CourseName</th>
+        <th>CourseId</th>
+        <th>InstituteName</th>
+        <th>Address</th>
+        <th>CourseDuration</th>
+        <th>CourseURL</th>
+        <th>update</th>
+        <th>Remove</th>
+    </tr>
+</thead>
+<br>
+
+
+<tbody class="tbody"class="text-center">
+<tr *ngFor="let text of courses"> here we are looping concept for given data so all the data can be stored here
+    
+<td><h6><input [disabled]="this.isHidden" type="text" #CourseName value=" {{text.CourseName}}"></h6></td>
+ <td><h6><input [disabled]="this.isHidden" type="text" #CourseId value=" {{text.CourseId}}"></h6></td>
+ <td><h6><input [disabled]="this.isHidden" type="text" #InstituteName value=" {{text.InstituteName}}"></h6></td>
+ <td><h6><input [disabled]="this.isHidden" type="text" #Address value=" {{text.Address}}"></h6></td>
+ <td><h6><input [disabled]="this.isHidden" type="text" #CourseDuration value=" {{text.CourseDuration}}"></h6></td>
+ <td><h6><input [disabled]="this.isHidden" type="text" #CourseURL value=" {{text.CourseURL}}"></h6></td>
+ 
+ this buttons used for edit and delete functions  in edit we can add (if else) in ts.file conditions here
+ <td>
+    <button style="color:white; background-color: #3f9ce2; font-size:x-large; width:100px " class="btn btn-primary" (click)="editDoc()"  (click)="this.isHidden ?  updateCourseData(CourseName.value):false"> {{this.isHidden ? "edit" : "save"}}</button>
+</td>
+ 
+ <td>
+    <button style="color:white; background-color:red; font-size:x-large; width:100px" class="btn btn-danger" (click)="deleteCourse()">Delete</button>
+ </td>
+ </tr>
+
+
+</tbody>
+</table>-->
+</table>
+</body>
+</html>
